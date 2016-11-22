@@ -6,22 +6,25 @@
 
   <div id="welcomeMsgStyle">
     <span id="welcomeMsg">
-    <p>Welcome to the Staten Island Coin Club. We currently meet on the 3<sup><u>rd</u></sup> Thursday of each month. Most of our members focus their coin collecting on U.S. coins although their are a fair share that enjoy foreign coins too. Our membership includes everything from expert numismatists (coin collecters) to the novice collector to those who just wish to learn more about coin collecting.</p>
+    <p>&nbsp&nbsp&nbsp&nbsp Welcome to the <u>Staten Island Coin Club</u>. Our membership includes everyone from those who wish to learn more about coin collecting to the novice collector to expert numismatists (coin collecters). It also spans the gammit from those who haven't started yet (but want to) to those who have modest collections to dealers. Most of our members focus their coin collecting on U.S. coins although their are a fair share that enjoy foreign coins too. We currently meet on the 3<sup id="smNote"><u>rd</u></sup> Thursday of each month.<br>&nbsp&nbsp&nbsp&nbsp There is no fee to register on our site.<sup id="annote">1</sup> Come on in and feel free to browse around. </p>
     </span>
   </div>
 
   <div id="logging">
     <!-- User Resistration Button -->
     <form action="/users/sign_up">
-      <input type="submit"  id="button1" value="Register" />
+      <input type="submit"  id="button1" value="Register" title="Register" />
     </form>
     <!-- <%= link_to 'Register', new_user_registration_path %> -->
 
     <!-- User Login Button -->
     <form action="/users/sign_in">
-      <input type="submit"  id="button2" value="Login" />
+      <input type="submit"  id="button2" value="Login" title="Login" />
     </form>
     <!-- <%= link_to 'Login', new_user_session_path %> -->
   <% end %>
+  </div>
+  <div id="annote2">
+    1 - There is a nominal annual fee should you decide to become a member.
   </div>
 </nav>

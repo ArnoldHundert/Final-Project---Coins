@@ -40,6 +40,17 @@
 span p{
   color: darkblue;
 }
+#smNote{
+  font-size: 12px;
+}
+#annote{
+  font-size: 12px;
+}
+#annote2{
+  position: absolute;
+  bottom: 30px;
+  font-size: 12px;
+}
 .align_job {
    text-align: right;
    margin-right: 38%;
