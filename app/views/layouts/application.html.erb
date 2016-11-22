@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Coins</title>
+    <title>Staten Island Coin Club</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="backimg">
+    <div class="page_header">
+      Staten Island Coin Club
+    </div>
+    <img src="assets/Staten_Island_Coin_Club_Logo.png" alt="Club Logo goes here." width="100" height="100" style="position:absolute; top:20px; left:20px">
+
     <%= yield %>
+
+    <!-- ******** Dropdown Menu ********** -->
+
+    	<span class="dropdown">
+    		<div class="hamburgerMenu"></div>
+    		<div class="hamburgerMenu"></div>
+    		<div class="hamburgerMenu"></div>
+    		<div class="dropdown-content">
+    			<a href="/">Home</a>
+    			<a href="/users/sign_in">Login</a>
+    			<a href="#">Contact</a>
+    			<a href="#">Staff</a>
+    			<a href="#">About</a>
+    		</div>
+    	</span>
+
+    <!-- ******** Dropdown Menu ********** -->
+
   </body>
 
   <p class="notice"><%= notice %></p>

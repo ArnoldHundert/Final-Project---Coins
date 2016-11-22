@@ -1,0 +1,27 @@
+<nav>
+  <% if (user_signed_in?) %>
+  <!-- Add something here for the user to see after they login -->
+
+  <% else %>
+
+  <div id="welcomeMsgStyle">
+    <span id="welcomeMsg">
+    <p>Welcome to the Staten Island Coin Club. We currently meet on the 3<sup><u>rd</u></sup> Thursday of each month. Most of our members focus their coin collecting on U.S. coins although their are a fair share that enjoy foreign coins too. Our membership includes everything from expert numismatists (coin collecters) to the novice collector to those who just wish to learn more about coin collecting.</p>
+    </span>
+  </div>
+
+  <div id="logging">
+    <!-- User Resistration Button -->
+    <form action="/users/sign_up">
+      <input type="submit"  id="button1" value="Register" />
+    </form>
+    <!-- <%= link_to 'Register', new_user_registration_path %> -->
+
+    <!-- User Login Button -->
+    <form action="/users/sign_in">
+      <input type="submit"  id="button2" value="Login" />
+    </form>
+    <!-- <%= link_to 'Login', new_user_session_path %> -->
+  <% end %>
+  </div>
+</nav>
