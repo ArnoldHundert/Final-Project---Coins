@@ -1,16 +1,18 @@
-<h2>Forgot your password?</h2>
+<br>
+<div class="page_header_joint page_header2">
+  Forgot your password?
+</div>
+<br>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="align_job">
+    <%= f.label :usertype, "Email: ", :class => "labelStyle" %>
+    <%= f.email_field :email, :class => "fieldStyle", autofocus: true %><br>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+  <div class="align_job8">
+    <%= f.submit "Send me reset password instructions", :class => "buttonJobSave_joint buttonJobSave4" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

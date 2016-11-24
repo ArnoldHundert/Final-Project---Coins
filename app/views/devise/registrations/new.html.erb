@@ -1,13 +1,48 @@
 <br>
-<div class="page_header2">
+<div class="page_header_joint page_header2">
   Register
+  <span class="required_field">
+    <%= "*" %>
+  </span>
 </div>
-<br>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="align_job">
+  <div class="align_job2">
+    <%= f.label :fname, "First Name: ", :class => "labelStyle" %>
+    <%= f.text_field :fname, :class => "fieldStyle", autocomplete: "off", autofocus: true %>
+    <%= f.label :lname, "Last Name: ", :class => "labelStyle" %>
+    <%= f.text_field :lname, :class => "fieldStyle", autocomplete: "off" %>
+  </div>
+
+  <div class="align_job2">
+    <%= f.label :address1, "address1: ", :class => "labelStyle" %>
+    <%= f.text_field :address1, :class => "fieldStyle fieldStyle2", autocomplete: "off" %>
+  </div>
+
+  <div class="align_job2">
+    <%= f.label :address2, "address2: ", :class => "labelStyle" %>
+    <%= f.text_field :address2, :class => "fieldStyle fieldStyle2", autocomplete: "off" %>
+  </div>
+
+  <div class="align_job7">
+    <%= f.label :city, "city: ", :class => "labelStyle" %>
+    <%= f.text_field :city, :class => "fieldStyle", autocomplete: "off" %>
+
+    <span class="droplist">
+      <%= f.label :state, "State: ", :class => "labelStyle" %>
+      <%= f.select :usertype, ['AL', 'AK', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY'], selected: 'NY' %>
+    </span>
+
+    <%= f.label :zipcode, "Zip Code: ", :class => "labelStyle" %>
+    <%= f.text_field :zipcode, :class => "fieldStyle fieldStyle3", autocomplete: "off" %>
+  </div>
+
+  <div class="align_job2">
+    <%= f.label :phnumber, "Phone Number: ", :class => "labelStyle" %>
+    <%= f.text_field :phnumber, :class => "fieldStyle", autocomplete: "off" %>
+
     <%= f.label :usertype, "Email: ", :class => "labelStyle" %>
     <%= f.email_field :email, :class => "fieldStyle", autofocus: true %><br>
 
@@ -22,9 +57,11 @@
     <%= f.label :password_confirmation, :class => "labelStyle" %>
     <%= f.password_field :password_confirmation, :class => "fieldStyle", autocomplete: "off" %><br>
 
-        <%= f.submit "Submit", :class => "buttonJobSave4" %>
+    <%= f.submit "Submit", :class => "buttonJobSave_joint buttonJobSave3" %>
 
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div id="annote3">
+    &nbsp * - All fields are required.
+  </div>
