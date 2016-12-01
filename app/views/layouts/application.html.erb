@@ -29,7 +29,13 @@
           <a href="/users/sign_up">Register</a>
     			<a href="/users/sign_in">Login</a>
     			<a href="#">Contact</a>
-    			<a href="#">About</a>
+          <a href="#">About</a>
+
+          <% if current_user %>
+            <a href="devise/sessions#destroy" title="LogOut">
+              <%= link_to 'LogOut',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %></a>
+          <% end %>
+
     		</div>
     	</span>
 

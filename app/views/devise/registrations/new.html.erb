@@ -7,7 +7,7 @@
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= devise_error_messages!, class="page_header_joint page_header2" %>
 
   <div class="align_job2">
     <%= f.label :fname, "First Name: ", :class => "labelStyle" %>

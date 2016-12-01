@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :welcome
   resources :sessions
   resources :users
+  resources :posts
 
 end
