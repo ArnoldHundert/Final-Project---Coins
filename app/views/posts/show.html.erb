@@ -1,0 +1,27 @@
+<div class="page_header">
+  Posts
+</div>
+<br>
+<p id="notice"><%= notice %></p>
+
+<div class="align_job4">
+  <span>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </span>
+
+  <p>
+    <strong>Subject:</strong>
+    <%= @post.subject %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @post.content %>
+  </p>
+</div>
+
+<div class="align_job5">
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+</div>

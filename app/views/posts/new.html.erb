@@ -1,0 +1,30 @@
+<div class="page_header">
+  New Post
+</div>
+<br>
+
+
+<div class="page_header">
+  <%= @message %>
+</div>
+
+<div class="align_post">
+  <%= form_for :post, url: posts_path do |post|%>
+    <%= label_tag "postDescription", "post Description: ", :class => "labelStyle" %>
+    <%= post.text_field :postDescription, placeholder: "Description", :autofocus=>true, :class => "fieldStyle" %><br>
+    <%= label_tag "postOrigin", "post Origin: ", :class => "labelStyle" %>
+    <%= post.text_field :postOrigin, placeholder: "Origin", :class => "fieldStyle" %><br>
+    <%= label_tag "postDestination", "post Destination: ", :class => "labelStyle" %>
+    <%= post.text_field :postDestination, placeholder: "Destination", :class => "fieldStyle" %><br>
+    <%= label_tag "postCost", "post Cost: ", :class => "labelStyle" %>
+    <%= post.text_field :postCost, placeholder: "ie. 2000250.00", :class => "fieldStyle" %><br>
+    <%= label_tag "postContainersAmount", "# of Containers / post: ", :class => "labelStyle" %>
+    <%= post.text_field :postContainersAmount, placeholder: "Qty of Containers", :class => "fieldStyle" %><br>
+    <%= post.submit "Save", :class => "buttonpostSave" %>
+  <% end %>
+</div>
+
+
+<%= render 'form', post: @post %>
+
+<%= link_to 'Back', posts_path %>

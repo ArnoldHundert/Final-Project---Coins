@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   resources :welcome
-  resources :sessions
+  # resources :sessions
   resources :users
   resources :posts
 

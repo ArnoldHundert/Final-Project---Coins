@@ -13,7 +13,7 @@
       Staten Island Coin Club
     </div>
     <a href="/">
-    <img src="/assets/Staten_Island_Coin_Club_Logo.png" alt="Club Logo goes here." width="100" height="100" style="position:absolute; top:20px; left:20px; border:0">
+    <img src="/assets/Staten_Island_Coin_Club_Logo.png" alt="Club Logo goes here." width="100" height="100" title="Home" style="position:absolute; top:20px; left:20px; border:0">
     </a>
 
     <%= yield %>
@@ -24,18 +24,33 @@
     		<div class="hamburgerMenu"></div>
     		<div class="hamburgerMenu"></div>
     		<div class="hamburgerMenu"></div>
+
     		<div class="dropdown-content">
-    			<a href="/">Home</a>
-          <a href="/users/sign_up">Register</a>
-    			<a href="/users/sign_in">Login</a>
-    			<a href="#">Contact</a>
-          <a href="#">About</a>
+          <nav>
+    			  <li><a href="/" title="Home">Home</a></li>
 
           <% if current_user %>
-            <a href="devise/sessions#destroy" title="LogOut">
-              <%= link_to 'LogOut',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %></a>
+            <li id="ws"><a href="posts#index" title="Posts">Posts</a>
+              <nav>
+                <li><a href="#">Create New</a></li>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">View Mine</a></li>
+              </nav></li>
           <% end %>
 
+          <% if !current_user %>
+            <li><a href="/users/sign_up" title="Register">Register</a></li>
+      			<li><a href="/users/sign_in" title="Login">Login</a></li>
+          <% end %>
+
+    			<li><a href="#" title="Contact">Contact</a></li>
+          <li><a href="#" title="About">About</a></li>
+
+          <% if current_user %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% end %>
+
+          </nav>
     		</div>
     	</span>
 
@@ -43,7 +58,8 @@
 
   </body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <br>
+  <% if notice %><p class="page_header_joint page_header2"><%= notice %></p><% end %>
+  <% if alert %><p class="page_header_joint page_header2"><%= alert %></p><% end %>
 
 </html>
