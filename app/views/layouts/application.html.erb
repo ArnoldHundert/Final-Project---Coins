@@ -3,7 +3,7 @@
   <head>
     <title>Staten Island Coin Club</title>
     <%= csrf_meta_tags %>
-
+    <META HTTP-EQUIV="refresh" CONTENT="10">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,14 +20,13 @@
 
     <!-- ******** Dropdown Menu ********** -->
 
-    	<span class="dropdown">
-    		<div class="hamburgerMenu"></div>
-    		<div class="hamburgerMenu"></div>
-    		<div class="hamburgerMenu"></div>
-
-    		<div class="dropdown-content">
-          <nav>
-    			  <li><a href="/" title="Home">Home</a></li>
+  	<span class="dropdown">
+  		<div class="hamburgerMenu"></div>
+  		<div class="hamburgerMenu"></div>
+  		<div class="hamburgerMenu"></div>
+      <div class="dropdown-content">
+      	<nav>
+          <li><a href="/" title="Home">Home</a></li>
 
           <% if current_user %>
             <li id="ws"><a href="posts#index" title="Posts">Posts</a>
@@ -37,22 +36,18 @@
                 <li><a href="#">View Mine</a></li>
               </nav></li>
           <% end %>
-
           <% if !current_user %>
             <li><a href="/users/sign_up" title="Register">Register</a></li>
       			<li><a href="/users/sign_in" title="Login">Login</a></li>
           <% end %>
-
-    			<li><a href="#" title="Contact">Contact</a></li>
+          <li><a href="#" title="Contact">Contact</a></li>
           <li><a href="#" title="About">About</a></li>
-
           <% if current_user %>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <li title="Log Out"><%= link_to 'Sign Out',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %></li>
           <% end %>
-
-          </nav>
-    		</div>
-    	</span>
+        </nav>
+      </div>
+  	</span>
 
     <!-- ******** Dropdown Menu ********** -->
 
