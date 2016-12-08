@@ -77,8 +77,19 @@
 }
 .align_job3 {
   text-align: right;
-  margin-right: 38%;
+  margin-left: 22%;
+  display: block;
+  width: 800px;
+  background-color: rgba(255,255,224,.7);
+  border-style: solid;
+  border-width: 3px;
+  border-color: darkblue;
+  box-shadow: 5px 5px 5px #888888;
+  padding-left: 20px;
   font-size: 52px;
+  font-weight: bold;
+  -webkit-text-stroke-width:1px;
+  -webkit-text-stroke-color:black;
 }
 .align_job4 {
   text-align: right;
@@ -114,6 +125,11 @@
   font-family: 'Wallpoet', cursive;
   font-size: 28px;
 }
+.labelStyle2 {
+  color: white;
+  font-family: 'Wallpoet', cursive;
+  font-size: 28px;
+}
 .fieldStyle{
   font-size: 22px;
   vertical-align: middle;
@@ -125,7 +141,21 @@
   width: 100px;
   margin-right: 36%;
 }
-}*/
+.fieldStyle4{
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 22px;
+  width: 570px;
+}
+.fieldStyle5{
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 22px;
+  width: 570px;
+  height: 100px;
+  line-height: normal;
+  vertical-align: text-top;
+}
 .droplist{
   width: 60%;
 }
@@ -157,7 +187,6 @@
 }
 .buttonJobSave_joint {
   margin-top: 25px;
-  color: black;
   font-size: 38px;
   cursor: pointer;
   background-color: lightyellow;
@@ -171,6 +200,9 @@
 }
 .buttonJobSave1{
   margin-right: 13%;
+}
+.buttonJobSave2{
+  margin: 20px 350px;
 }
 .buttonJobSave3{
   margin-right: 23%;

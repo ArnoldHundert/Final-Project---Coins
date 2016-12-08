@@ -3,7 +3,7 @@
   <head>
     <title>Staten Island Coin Club</title>
     <%= csrf_meta_tags %>
-    <META HTTP-EQUIV="refresh" CONTENT="10">
+    <!-- <META HTTP-EQUIV="refresh" CONTENT="10"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -31,9 +31,9 @@
           <% if current_user %>
             <li id="ws"><a href="posts#index" title="Posts">Posts</a>
               <nav>
-                <li><a href="#">Create New</a></li>
+                <li><a href="/posts/new">Create New</a></li>
                 <li><a href="#">View All</a></li>
-                <li><a href="#">View Mine</a></li>
+                <li><a href="/posts/:id">View Mine</a></li>
               </nav></li>
           <% end %>
           <% if !current_user %>
@@ -43,7 +43,7 @@
           <li><a href="#" title="Contact">Contact</a></li>
           <li><a href="#" title="About">About</a></li>
           <% if current_user %>
-            <li title="Log Out"><%= link_to 'Sign Out',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %></li>
+            <li title="Log Out"><%= link_to 'Log Out',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %></li>
           <% end %>
         </nav>
       </div>

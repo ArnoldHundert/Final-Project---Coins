@@ -1,29 +1,29 @@
-<div class="page_header">
-  New Post
+<br>
+<div class="page_header_joint page_header2">
+  Create a New Post
 </div>
 <br>
 
+<div class="align_job3">
 
-<div class="page_header">
-  <%= @message %>
-</div>
+  <%= form_for @post, url: posts_path, html: { multipart: true } do |post| %>
 
-<div class="align_post">
-  <%= form_for :post, url: posts_path do |post|%>
-    <%= label_tag "postDescription", "post Description: ", :class => "labelStyle" %>
-    <%= post.text_field :postDescription, placeholder: "Description", :autofocus=>true, :class => "fieldStyle" %><br>
-    <%= label_tag "postOrigin", "post Origin: ", :class => "labelStyle" %>
-    <%= post.text_field :postOrigin, placeholder: "Origin", :class => "fieldStyle" %><br>
-    <%= label_tag "postDestination", "post Destination: ", :class => "labelStyle" %>
-    <%= post.text_field :postDestination, placeholder: "Destination", :class => "fieldStyle" %><br>
-    <%= label_tag "postCost", "post Cost: ", :class => "labelStyle" %>
-    <%= post.text_field :postCost, placeholder: "ie. 2000250.00", :class => "fieldStyle" %><br>
-    <%= label_tag "postContainersAmount", "# of Containers / post: ", :class => "labelStyle" %>
-    <%= post.text_field :postContainersAmount, placeholder: "Qty of Containers", :class => "fieldStyle" %><br>
-    <%= post.submit "Save", :class => "buttonpostSave" %>
+    <%= label_tag "title", "Post Title: ", :class => "labelStyle2" %>
+    <%= post.text_field :title, placeholder: "Title", :autofocus=>true, :class => "fieldStyle4" %><br>
+
+    <%= label_tag "post", "Post Description: ", :class => "labelStyle" %>
+    <%= post.text_area :post, placeholder: "Description", :class => "fieldStyle5" %><br>
+
+
+
+    <%= label_tag "post_image_file_name", "Attach Image: ", :class => "labelStyle" %>
+    <%= post.file_field :post_image_file_name, placeholder: "Image", :class => "fieldStyle4" %><br>
+
+
+    <%= post.submit "Save", :class => "buttonJobSave_joint buttonJobSave2" %>
   <% end %>
-</div>
 
+</div>
 
 <%= render 'form', post: @post %>
 
