@@ -14,17 +14,14 @@
     <%= label_tag "post", "Post Description: ", :class => "labelStyle" %>
     <%= post.text_area :post, placeholder: "Description", :class => "fieldStyle5" %><br>
 
-
-
     <%= label_tag "post_image_file_name", "Attach Image: ", :class => "labelStyle" %>
     <%= post.file_field :post_image_file_name, placeholder: "Image", :class => "fieldStyle4" %><br>
 
 
     <%= post.submit "Save", :class => "buttonJobSave_joint buttonJobSave2" %>
+
   <% end %>
 
 </div>
-
-<%= render 'form', post: @post %>
 
 <%= link_to 'Back', posts_path %>

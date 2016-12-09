@@ -3,19 +3,24 @@ class PostsController < ApplicationController
   def index
     # @message = "Staten Island Coin Club"
   end
-
   def create
     @post = Post.create( post_params )
   end
-
-
-  * new
-  * show
-  * edit
-  * update
-  * destroy
-
-
+  def new
+    @post = Post.new
+  end
+  def show
+    @post = Post.show( post_params )
+  end
+  def edit
+    @post = Post.edit( post_params )
+  end
+  def update
+    @post = Post.update( post_params )
+  end
+  def destroy
+    @post = Post.destroy( post_params )
+  end
 
 
   private
@@ -25,7 +30,7 @@ class PostsController < ApplicationController
   # controller methods.
 
   def post_params
-    params.require(:post).permit(:title, :image, :post, :user_id)
+    params.require(:post).permit(:title, :post, :post_image_file_name, :post_image_file_size, :user_id)
   end
 
 end
